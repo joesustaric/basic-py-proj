@@ -31,3 +31,17 @@ poetry run pytest # -v for verbose
 ```
 >[!NOTE]
 > The test configuration setting are in the `project.toml` file.
+
+This project uses [Ruff](https://docs.astral.sh/ruff/) as a Python linter and code formatter.
+
+To use it run:
+```bash
+# Check code format
+poetry run ruff check
+
+# Check code format and fix
+poetry run ruff check --fix
+
+# Run the Linter
+poetry run ruff format
+```
