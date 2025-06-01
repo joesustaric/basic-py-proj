@@ -45,3 +45,7 @@ poetry run ruff check --fix
 # Run the Linter
 poetry run ruff format
 ```
+
+## TODOS:
+
+Run these things in a docker container.
