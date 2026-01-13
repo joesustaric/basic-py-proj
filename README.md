@@ -48,4 +48,6 @@ poetry run ruff format
 
 ## TODOS:
 
-Run these things in a docker container.
+Run these things in a docker container. 
+test commit - delete this line later
+
