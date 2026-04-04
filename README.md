@@ -1,52 +1,45 @@
 # basic-py-proj
 
 This is just a hello-world style project to clone from for me to begin small python projects.
-asdf
+
 ## Setup
 
-I use `asdf` to manage versions of things.
+I use [mise](https://mise.jdx.dev/) to manage tool versions and [uv](https://docs.astral.sh/uv/) for dependency management.
 
-This uses a `.tool-versions` file to define the versions of things used. Look there and install them.
-
-Then run:
+Install mise, then run:
 ```bash
-poetry install
+mise install        # installs python and uv
+uv sync --group dev # installs all dependencies
 ```
 
 ## Development Setup
 
-Ensures you're working in an isolated environment where dependencies won't conflict with other projects or the system Python.
+To run the main function:
 ```bash
-poetry shell
+uv run say_hello
 ```
 
-To run the main function.
+Run the tests:
 ```bash
-poetry run say_hello
-```
-
-Run the tests.
-```bash
-poetry run pytest # -v for verbose
+uv run pytest # -v for verbose
 ```
 >[!NOTE]
-> The test configuration setting are in the `project.toml` file.
+> The test configuration settings are in the `pyproject.toml` file.
 
 This project uses [Ruff](https://docs.astral.sh/ruff/) as a Python linter and code formatter.
 
 To use it run:
 ```bash
-# Check code format
-poetry run ruff check
+# Check code
+uv run ruff check
 
-# Check code format and fix
-poetry run ruff check --fix
+# Check code and fix
+uv run ruff check --fix
 
-# Run the Linter
-poetry run ruff format
+# Format code
+uv run ruff format
 ```
 
 ## TODOS:
 
-Run these things in a docker container. 
-
+Run these things in a docker container.
